@@ -1209,7 +1209,8 @@ class NfcManager extends ReactContextBaseJavaModule implements ActivityEventList
 
         int flag = 0;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-            flag = PendingIntent.FLAG_MUTABLE;
+            //flag = PendingIntent.FLAG_MUTABLE;
+            flag = 33554432;
         }
         return PendingIntent.getActivity(activity, 0, intent, flag);
     }
